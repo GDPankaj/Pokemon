@@ -13,22 +13,22 @@ using namespace std;
         cout << "\n1. Charmender\n2. Bulbasaur\n3. Squirtle\n";
         cout << "OAK : Choose wisely just Give whichever number you want.\n";
         cin >> playerChoice;
-        if (playerChoice == 1) {
+
+        switch (playerChoice)
+        {
+        case 1:
             cout << "OAK : So you want Charmender. Are you sure? \n1. Yes\n2. No";
-            //Confirmation();
-        }
-        else if (playerChoice == 2) {
+            break;
+        case 2:
             cout << "OAK : So you want Bulbasaur. Are you sure? \n1. Yes\n2. No";
-            //Confirmation();
-        }
-        else if (playerChoice == 3) {
+            break;
+        case 3:
             cout << "OAK : So you want Squirtle. Are you sure? \n1. Yes\n2. No";
-            //Confirmation();
-        }
-        else {
+            break;
+        default:
             cout << "Invalid choice Bro BYE";
+            break;
         }
-        //ChoosePokemon();
 
         return 0;
     }
