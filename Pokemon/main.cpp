@@ -24,7 +24,7 @@ public:
     {
         name = "Pikachu";
         type = PokemonType::ElectricType;
-        health = 40;
+        health = 10;
     }
     Pokemon(string p_Name, PokemonType p_Type, int p_Health) 
     {
@@ -32,7 +32,18 @@ public:
         type = p_Type;
         health = p_Health;
     }
+    // Copy constructor
+    Pokemon(const Pokemon& other) {
+        name = other.name;
+        type = other.type;
+        health = other.health;
+        cout << "A new Pokemon has been copied from " << other.name << "!\n";
+    }
 
+    // Destructor
+    ~Pokemon() {
+        cout << name << " has been released.\n";
+    }
     void attack() 
     {
         cout << name << " Attacks With Powerful Attack!!\n"; //<< endl;
@@ -44,6 +55,24 @@ class Player
 public:
     string p_Name;
     Pokemon p_ChosenPokemon;
+
+    Player() 
+    {
+        p_Name = "Trainer";
+        p_ChosenPokemon = Pokemon();
+    }
+
+    Player(string newName, Pokemon newChosenPokemon)
+    {
+        p_Name = newName;
+        p_ChosenPokemon = newChosenPokemon;
+    }
+
+    Player(Player& otherPlayer)
+    {
+        p_Name = otherPlayer.p_Name;
+        p_ChosenPokemon = otherPlayer.p_ChosenPokemon;
+    }
 
     void choosePokemon(int choice) {
         switch (choice) {
@@ -129,6 +158,19 @@ int main()
     Player player;
     ProfessorOak oak;
     Pokemon placeHolderPokemon;
+
+    Pokemon defaultPokemon = Pokemon();
+    Pokemon Charmander = Pokemon("Charmander", PokemonType::FireType, 100);
+    Pokemon Bulbasaur = Pokemon("Bulbasaur", PokemonType::GrassType, 100);
+    Pokemon copyBulbasaur = Pokemon(Bulbasaur);
+
+    cout << "Charmader pokemon's name is " << Charmander.name << " its health is " << Charmander.health << endl;
+    cout << "Bulbasaur pokemon's name is " << Bulbasaur.name << " its health is " << Bulbasaur.health << endl;
+    cout << "copyBulbasaur pokemon's name is " << copyBulbasaur.name << " its health is " << copyBulbasaur.health << endl;
+    copyBulbasaur.health = 80;
+    copyBulbasaur.name = "copy bulbasaur";
+    cout << "Bulbasaur pokemon's name is " << Bulbasaur.name << " its health is " << Bulbasaur.health << endl;
+    cout << "copyBulbasaur pokemon's name is " << copyBulbasaur.name << " its health is " << copyBulbasaur.health << endl;
 
     placeHolderPokemon.name = "Pikachu";
     placeHolderPokemon.type = PokemonType::ElectricType;
