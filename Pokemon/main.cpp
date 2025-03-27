@@ -2,6 +2,9 @@
 #include <string>
 using namespace std;
 
+//accidentally made this changes in feature2
+//creating PR for now 
+
 void clearConsole() {
 #ifdef _WIN32
     system("cls");
