@@ -265,7 +265,7 @@ void gameLoop(Player& _player) {
 //int playerChoice;
 //int confirmation;
     
-int main() 
+int main()
 {
     Player player;
     ProfessorOak oak;
@@ -280,6 +280,6 @@ int main()
     cout << "Good Job " << endl;
 
     gameLoop(player);
-//    cout << player.p_Name << " has chosen " << player.p_ChosenPokemon.name << " as his first Pokemon";
+    //    cout << player.p_Name << " has chosen " << player.p_ChosenPokemon.name << " as his first Pokemon";
     return 0;
-#include "header.hpp"
+}
