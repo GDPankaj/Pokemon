@@ -6,7 +6,6 @@
 #include "Utility.hpp"
 #include "Pokemon.hpp"
 
-//I made changes some other way
 using namespace std;
 
 class ProfessorOak
