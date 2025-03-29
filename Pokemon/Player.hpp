@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
 #include <limits>
-//#include "Pokemon.hpp"
-
+#include "Pokemon.hpp"
 using namespace std;
 
 class Player {

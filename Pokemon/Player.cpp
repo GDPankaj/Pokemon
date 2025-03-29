@@ -1,8 +1,9 @@
+
+#include "Pokemon.hpp"
 #include "Player.hpp"
 #include "PokemonChoice.hpp"
 #include "PokemonType.hpp"
 #include "Utility.hpp"
-#include "Pokemon.hpp"
 using namespace std;
 
 Player::Player() {
@@ -21,14 +22,14 @@ Player::Player(Player& otherPlayer) {
 }
 
 void Player::choosePokemon(int choice) {
-    switch (choice) {
-    case 1:
+    switch ((PokemonChoice)choice) {
+    case PokemonChoice::Charmander:
         p_ChosenPokemon = Pokemon("Charmander", PokemonType::FireType, 100);
         break;
-    case 2:
+    case PokemonChoice::Bulbasaur:
         p_ChosenPokemon = Pokemon("Bulbasaur", PokemonType::GrassType, 100);
         break;
-    case 3:
+    case PokemonChoice::Squirtle:
         p_ChosenPokemon = Pokemon("Squirtle", PokemonType::WaterType, 100);
         break;
     default:

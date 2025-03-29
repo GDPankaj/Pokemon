@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include <limits>
-
+enum class PokemonType;
+//class Player;
 using namespace std;
 
 class Pokemon {
@@ -17,5 +18,3 @@ public :
     ~Pokemon();
     void attack();
 };
-
-#include "Player.hpp"

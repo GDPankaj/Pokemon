@@ -31,3 +31,5 @@ void Pokemon::attack()
 {
     cout << name << " Attacks With Powerful Attack!!\n"; //<< endl;
 }
+
+#include "Player.hpp"
