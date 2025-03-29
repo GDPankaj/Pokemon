@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include "PokemonType.hpp"
+#include "PokemonChoice.hpp"
 using namespace std;
 
 //accidentally made this changes in feature2
@@ -18,17 +20,6 @@ void clearConsole() {
 void waitForEnter() {
     cin.get();
 }
-
-enum class PokemonType
-{
-    FireType, WaterType, GrassType, ElectricType
-};
-
-
-enum class PokemonChoice
-{
-    Charmander, Bulbasaur, Squirtle, Invalid_Choice
-};
 
 class Pokemon 
 {
