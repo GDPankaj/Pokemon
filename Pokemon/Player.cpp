@@ -2,26 +2,27 @@
 #include <string>
 #include <limits>
 #include "Player.hpp"
+#include "Pokemon.hpp"
 using namespace std;
 
 Player::Player() {
 	p_Name = "Trainer";
-	//p_ChosenPokemon = Pokemon();
+	p_ChosenPokemon = Pokemon();
 }
 
-//Player::Player(string newName, Pokemon newChosenPokemon) {
-//	p_Name = newName;
-//	p_ChosenPokemon = newChosenPokemon;
-//}
+Player::Player(string newName, Pokemon newChosenPokemon) {
+	p_Name = newName;
+	p_ChosenPokemon = newChosenPokemon;
+}
 
 Player::Player(Player& otherPlayer) {
 	p_Name = otherPlayer.p_Name;
-	//p_ChosenPokemon = otherPlayer.p_ChosenPokemon;
+	p_ChosenPokemon = otherPlayer.p_ChosenPokemon;
 }
 
-void chochoosePokemon(int choice) {
+void Player::choosePokemon(int choice) {
     switch (choice) {
-    /*case 1:
+    case 1:
         p_ChosenPokemon = Pokemon("Charmander", PokemonType::FireType, 100);
         break;
     case 2:
@@ -33,6 +34,6 @@ void chochoosePokemon(int choice) {
     default:
         p_ChosenPokemon = Pokemon("Pikachu", PokemonType::ElectricType, 100);
         break;
-    }*/
+    }
     //cout << "Player " << p_Name << " chose " << p_ChosenPokemon.name << "!\n";
 }

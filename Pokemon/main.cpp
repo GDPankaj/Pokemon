@@ -4,45 +4,46 @@
 #include "PokemonType.hpp"
 #include "PokemonChoice.hpp"
 #include "Utility.hpp"
-#include "Player.hpp"
+#include "Pokemon.hpp"
+//#include "Player.hpp"
 using namespace std;
 
-class Pokemon 
-{
-public:
-    string name;
-    PokemonType type;
-    int health;
-
-    Pokemon() 
-    {
-        name = "Pikachu";
-        type = PokemonType::ElectricType;
-        health = 10;
-    }
-    Pokemon(string p_Name, PokemonType p_Type, int p_Health) 
-    {
-        name = p_Name;
-        type = p_Type;
-        health = p_Health;
-    }
-    // Copy constructor
-    Pokemon(const Pokemon& other) {
-        name = other.name;
-        type = other.type;
-        health = other.health;
-        cout << "A new Pokemon has been copied from " << other.name << "!\n";
-    }
-
-    // Destructor
-    ~Pokemon() {
-        //cout << name << " has been released.\n";
-    }
-    void attack() 
-    {
-        cout << name << " Attacks With Powerful Attack!!\n"; //<< endl;
-    }
-};
+//class Pokemon 
+//{
+//public:
+//    string name;
+//    PokemonType type;
+//    int health;
+//
+//    Pokemon() 
+//    {
+//        name = "Pikachu";
+//        type = PokemonType::ElectricType;
+//        health = 10;
+//    }
+//    Pokemon(string p_Name, PokemonType p_Type, int p_Health) 
+//    {
+//        name = p_Name;
+//        type = p_Type;
+//        health = p_Health;
+//    }
+//    // Copy constructor
+//    Pokemon(const Pokemon& other) {
+//        name = other.name;
+//        type = other.type;
+//        health = other.health;
+//        cout << "A new Pokemon has been copied from " << other.name << "!\n";
+//    }
+//
+//    // Destructor
+//    ~Pokemon() {
+//        //cout << name << " has been released.\n";
+//    }
+//    void attack() 
+//    {
+//        cout << name << " Attacks With Powerful Attack!!\n"; //<< endl;
+//    }
+//};
 
 //class Player
 //{
