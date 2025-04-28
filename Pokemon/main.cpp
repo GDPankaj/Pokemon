@@ -2,6 +2,9 @@
 #include <string>
 using namespace std;
 
+//accidentally made this changes in feature2
+//creating PR for now 
+
 void clearConsole() {
 #ifdef _WIN32
     system("cls");
@@ -133,7 +136,7 @@ public:
         waitForEnter();
         cout << name << " : You must be eager to start your adventure. But first, you will need a Pokemon of your own!\n";
         waitForEnter();
-        cout << name << " : I have three Pokemon here with me. They’re all quite feisty!\n";
+        cout << name << " : I have three Pokemon here with me. They're all quite feisty!\n";
         waitForEnter();
         cout << name << ": Choose wisely...\n";
         cout << "1. Charmander - The fire type. A real hothead!\n";
@@ -210,6 +213,53 @@ public:
     }
 };
 
+void handleLoopChoices(int _c, bool& keepPLay) {
+    switch (_c)
+    {
+    case 1:
+        cout << "Battle wild pokemon really bro you will die just quit???? \n";
+        break;
+    case 2:
+        cout << "No body needs that bro just quit \n";
+        break;
+    case 3:
+        cout << "You will be embarrassed just go sleep bro \n";
+        break;
+    case 4:
+        cout << "Dont even think about it just quit";
+        break;
+    case 5:
+        cout << "Thank god have a great day good bye. I bid you a due, Good bye uuumaah!! and Good night Band!!!";
+        keepPLay = false;
+        break;
+    default:
+        cout << "You think you funny huh? \n";
+        break;
+    }
+    waitForEnter();
+}
+
+void gameLoop(Player& _player) {
+    
+    bool keepPlaying = true;
+    int choice;
+    while (keepPlaying) {
+        clearConsole();
+        cout << "\nWhat would you like to do next, " << _player.p_Name << "?\n";
+        cout << "1. Battle Wild Pokémon\n";
+        cout << "2. Visit PokeCenter\n";
+        cout << "3. Challenge Gyms\n";
+        cout << "4. Enter Pokemon League\n";
+        cout << "5. Quit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+        waitForEnter();
+        handleLoopChoices(choice, keepPlaying);
+        //waitForEnter();
+    }
+    
+}
+
 
 //string player_name;
 //int playerChoice;
@@ -228,6 +278,8 @@ int main()
     oak.offerPokemonChoice(player);
     oak.explainMainQuest(player);
     cout << "Good Job " << endl;
+
+    gameLoop(player);
 //    cout << player.p_Name << " has chosen " << player.p_ChosenPokemon.name << " as his first Pokemon";
     return 0;
 }

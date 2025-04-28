@@ -50,3 +50,10 @@ Makefile
 assets/*.png
 assets/*.wav
 assets/*.ogg
+Pokemon/.vs/Pokemon/v17/Browse.VC.db
+Pokemon/.vs/Pokemon/v17/DocumentLayout.backup.json
+Pokemon/.vs/Pokemon/v17/DocumentLayout.json
+Pokemon/Pokemon/x64/Debug/Pokemon.tlog/CL.command.1.tlog
+Pokemon/Pokemon/x64/Debug/Pokemon.tlog/link.command.1.tlog
+Pokemon/Pokemon/x64/Debug/Pokemon.tlog/link.read.1.tlog
+Pokemon/Pokemon/x64/Debug/vc143.idb
