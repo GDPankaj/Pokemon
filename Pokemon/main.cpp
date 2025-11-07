@@ -1,3 +1,4 @@
+#include "Utility.hpp"
 #include <iostream>
 #include <string>
 #include "PokemonType.hpp"
@@ -7,17 +8,11 @@ using namespace std;
 //creating PR for now 
 
 void clearConsole() {
-#ifdef _WIN32
-    system("cls");
-#else
-    system("clear");
-
-#endif
 
 }
 //wait for enter fuction
 void waitForEnter() {
-    cin.get();
+   
 }
 
 enum class PokemonChoice
