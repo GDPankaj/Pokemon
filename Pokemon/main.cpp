@@ -1,29 +1,19 @@
+#include "Utility.hpp"
 #include <iostream>
 #include <string>
+#include "PokemonType.hpp"
 using namespace std;
 
 //accidentally made this changes in feature2
 //creating PR for now 
 
 void clearConsole() {
-#ifdef _WIN32
-    system("cls");
-#else
-    system("clear");
-
-#endif
 
 }
 //wait for enter fuction
 void waitForEnter() {
-    cin.get();
+   
 }
-
-enum class PokemonType
-{
-    FireType, WaterType, GrassType, ElectricType
-};
-
 
 enum class PokemonChoice
 {
